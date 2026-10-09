@@ -1,7 +1,11 @@
 
 pipeline {
     agent any
-
+    
+    environment {
+        PATH = "C:\\Users\\khyat\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
+    }
+   
     stages {
         stage('Build Docker Image') {
             steps {
